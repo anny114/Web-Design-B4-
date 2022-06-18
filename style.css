@@ -1,0 +1,390 @@
+* {
+  font-family: 微軟正黑體;
+/*   border:solid 1px; */
+/*   font-weight:bold; */
+}
+/* ------------------------------------------------------ */
+body {
+  height: 1000px;
+}
+/* ------------------------------------------------------下面是導覽列 */
+nav.navbar {
+  transition: 0.5s;
+  font-weight:bold;
+}
+navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top {
+  background-color: transparent;
+}
+navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top a {
+  color: white;
+  transition: 0.5s;
+}
+navbar.navbar-expand-md.bg-dark.navbar-dark.fixed-top a:hover {
+  color: #0c8918;
+}
+/* ------------------------------------------------------下面是圖片背景+文字區 */
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://anny114.github.io/Web-Design-B4-/jumbotron_img.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+header.jumbotron .container {
+  color: white;
+/*   margin:200px; */
+  padding: 200px 0px;  font-size:100;
+}
+header.jumbotron hr {
+  max-width: 100px;
+  border: solid 2px #0c8918;
+  font-weight:normal;
+}
+header.jumbotron h1 {
+  font-size:50px;
+  font-weight:bold;
+}
+header.jumbotron h4 {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: normal;
+}
+/* ------------------------------------------------------下面是全部區塊的基礎設定 */
+section {
+  padding: 50px 0px;
+}
+/* ------------------------------------------------------下面是第一區塊(動畫) */
+section#section_1 {
+  background-color: #2a6b66;
+}
+section#section_1 .col-sm-5{
+/*   background:linear-gradient(#4c85d2 ,60%,#FD9C36); */
+}
+section#section_1 .col-sm-5 h2{
+  color: rgba(255, 255, 255, 0.85);
+}
+section#section_1 .col-sm-5.img {
+/*   background-image: url(http://img.tom61.com/photo/20166642/20162089/20161230/20161229.jpg); */
+  height: 400px;
+  padding:0px;
+  margin-top:50px;
+  margin-bottom:50px;
+/*   mix-blend-mode: multiply; */
+}
+section#section_1 .col-sm-5.img.forest{
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:400px;
+  height:400px;
+  background:linear-gradient(#4c85d2 ,60%,#FD9C36);
+/*   border-radius:10px; */
+/*   box-shadow:0px 2px 5px rgba(0,0,0,.3); */
+  transform:translate(-50%,-50%);
+}
+.grass{
+  position:absolute;
+  bottom:0;
+  background:rgba(136,176,75,1);
+  width:400px;
+}
+.bg{
+  width:400px;
+  height:400px;
+  background:#00815a;
+/*   border-radius:10px; */
+}
+.land1{
+  height:125px;
+  border-top-right-radius:100% 20px;
+  border-top-left-radius:100% 50px;
+/*   border-bottom-right-radius:20px; */
+/*   border-bottom-left-radius:20px; */
+}
+.land2{
+  height:100px;
+  background:rgba(152,217,142,.9);
+  border-top-right-radius:100% 80px;
+  border-top-left-radius:100% 10px;
+/*   border-bottom-right-radius:20px; */
+/*   border-bottom-left-radius:20px; */
+}
+.wood{
+  position:absolute;/*在上一個層級中的絕對位置*/
+  width:20px;/*方塊寬*/
+  height:90px;/*方塊長*/
+  left:50%;/*微調位置(左上角為中心點)*/
+  bottom:70px;/*微調位置(底往上多少)*/
+  transform:translate(-50%,-50%);/*微調位置*/
+  background:#4d3900;
+/*   border-bottom-right-radius:40px; */
+/*   border-bottom-left-radius:40px; */
+  animation-name: tree;
+/*   animation-duration:2s; */
+/*   animation-iteration-count:infinite; */
+/*   animation-direction:alternate; */
+/*   animation-timing-function:linear; */
+  animation:tree 3s steps(1000) infinite,move_forward 50s linear infinite;	
+}
+.leaves{
+  position:absolute;
+	background:#1e700d;
+  left:50%;
+  transform:translate(-50%,-50%);
+  bottom:70px;
+	width: 125px;
+	height: 160px;
+	border-radius: 50% / 50%;
+  animation-name: tree;
+/*   animation-duration:2s; */
+/*   animation-iteration-count:infinite; */
+/*   animation-direction:alternate; */
+/*   animation-timing-function:linear; */
+  animation:tree 3s steps(1000) infinite,move_forward 50s linear infinite;	
+}
+.cover{
+  position:absolute;
+  background-color:#2a6b66;
+  width: 400px;
+	height: 100px;
+  bottom:-100px;
+}
+.tree{
+/*   border:solid 2px red; */
+}
+
+@keyframes tree{
+  0%{
+    bottom: -120px;
+  }
+  25%{
+  }
+  50%{
+    bottom: 80px;
+  }
+  100%{
+  }
+}
+@keyframes tree1{
+  0%{
+    bottom: -120px;
+  }
+  25%{
+  }
+  50%{
+  }
+  100%{
+    bottom: 80px;
+  }
+}
+section#section_1 h2 {
+  margin-top: 130px;
+  padding: 0px 20px;
+  color:white;
+  font-weight:bold;
+}
+/* ------------------------------------------------------下面是第二區塊(森林種類) */
+#s2{
+  height: 15px;
+}
+section#section_2 img {
+  width: 130%;
+}
+section#section_2 .img_wrap {
+  height: 220px;
+  overflow: hidden;
+}
+/* ------------------------------------------------------下面是第三區塊(森林災害) */
+#s3{
+  height: 50px;
+}
+section#section_3 {
+  background-color: #222;
+  color: white;
+  padding: 0px;
+}
+section#section_3 hr{
+  font-weight:bold;
+  padding: 0;
+  border: solid 2px white;
+  max-width: 300px;
+}
+section#section_3 .col-sm-5 {
+  background-image: url(https://tnimage.s3.hicloud.net.tw/photos/2019/07/29/1564393325-5d3ebf6d8a326.jpg);
+  background-size: cover
+  height: 400px
+  background-position: 0 bottom
+}
+section#section_3 .col-sm-7 {
+  text-align: center;
+  padding:10px;
+}
+section#section_3 .col-sm-7 i {
+  font-size: 40px;
+}
+section#section_3 .col-sm-7 .col-sm-12{
+  padding:10px;
+}
+section#section_3 .col-sm-7 .col-sm-12 .col-sm-3 {
+  margin:0px;
+  display:inline-block;
+}
+section#section_3 .col-sm-12.features {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/* ------------------------------------------------------下面是輪播 */
+.carousel .carousel-item {
+  height: 300px;
+  width: 100%;
+  background-color:#222;
+}
+
+.carousel .carousel-item img {
+  min-height: 300px;
+  max-height: 400px;
+  object-fit: cover;
+}
+/* ------------------------------------------------------下面是第四區塊(維護) */
+#s4{
+  height: 15px;
+}
+section#section_4 img {
+  width: 100%;
+/*   height:200px; */
+}
+section#section_4 i {
+  font-size: 30px;
+}
+section#section_4 .feature {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+section#section_4 .feature .se{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left:300px;
+}
+/* ------------------------------------------------------下面是圖片背景+文字 */
+footer.jumbotron {
+  text-align: center;
+  background-image: url(https://anny114.github.io/Web-Design-B4-/jumbotron_img.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+footer.jumbotron input {
+  background-color: transparent;
+  max-width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer.jumbotron .container {
+  background-color:rgba(0, 0, 0, .2);
+  color: white;
+  padding: 50px 0px;
+}
+footer.jumbotron hr {
+  max-width: 100px;
+  border: solid 2px transparent;
+  font-weight:normal; 
+}
+
+footer.jumbotron h2{
+/*   font-weight:normal; */
+}
+
+footer.jumbotron img{
+  hight:100px;
+  width:100px;
+}
+/* ------------------------------------------------------更多資訊 */
+footer.jumbotron button.bt1{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+/*   padding-left:20px; */
+/*   padding-right:30px; */
+/*   padding: 10px 10px; */
+/*   margin:100px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+/*   margin: 4px 2px; */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+footer.jumbotron button.bt1 img{
+	hight:125px;
+  width:125px;
+}
+footer.jumbotron button.bt1{
+  background-color: transparent; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+footer.jumbotron button.bt1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+footer.jumbotron button.bt2{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+/*   padding: 10px 10px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+/*   margin: 4px 2px; */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+footer.jumbotron button.bt2 img{
+	hight:125px;
+  width:125px;
+}
+footer.jumbotron button.bt2{
+  background-color: transparent; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+footer.jumbotron button.bt2:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+/* ------------------------------------------------------置頂按鈕 */
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.4;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #4CAF50;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
